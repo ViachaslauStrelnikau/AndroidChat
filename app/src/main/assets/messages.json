@@ -1,0 +1,68 @@
+{
+  "messages":[
+    {
+      "id": 1007,
+      "ownUserId": 108,
+      "channelId": 102,
+      "rcpUserId": -1,
+      "time": 1564184122,
+      "text": "Is there anyone wants speak about music?"
+    },
+    {
+      "id": 1001,
+      "ownUserId": 108,
+      "channelId": 102,
+      "rcpUserId": -1,
+      "time": 1564072171,
+      "text": "Is there anyone from USA?"
+    },
+    {
+      "id": 1000,
+      "ownUserId": 107,
+      "channelId": 102,
+      "rcpUserId": -1,
+      "time": 1564064173,
+      "text": "Hello everybody!"
+    },
+    {
+      "id": 1002,
+      "ownUserId": 102,
+      "channelId": -1,
+      "rcpUserId": 100,
+      "time": 1564073173,
+      "text": "Hello Bob!"
+    },
+    {
+      "id": 1004,
+      "ownUserId": 102,
+      "channelId": 0,
+      "rcpUserId": -1,
+      "time": 1564093123,
+      "text": "Hello Rabbit!"
+    },
+    {
+      "id": 1005,
+      "ownUserId": 102,
+      "channelId": 0,
+      "rcpUserId": -1,
+      "time": 1564094151,
+      "text": "How are you?"
+    },
+    {
+      "id": 1006,
+      "ownUserId": 104,
+      "channelId": -1,
+      "rcpUserId": 105,
+      "time": 1564094153,
+      "text": "How are you?"
+    },
+    {
+      "id": 1007,
+      "ownUserId": 105,
+      "channelId": -1,
+      "rcpUserId": 104,
+      "time": 1564094154,
+      "text": "How are you?"
+    }
+  ]
+}

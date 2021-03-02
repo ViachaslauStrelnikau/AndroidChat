@@ -1,0 +1,20 @@
+{
+  "channels": [
+    {
+      "id": 0,
+      "name": "general"
+    },
+    {
+      "id": 101,
+      "name": "fashion"
+    },
+    {
+      "id": 102,
+      "name": "music"
+    },
+    {
+      "id": 103,
+      "name": "sport"
+    }
+  ]
+}

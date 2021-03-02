@@ -1,0 +1,143 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "channelId": 0,
+      "name": "<ALL>",
+      "sex": null,
+      "age": 0,
+      "loggedIn": true,
+      "technical": true
+    },
+    {
+      "id": 100,
+      "channelId": 0,
+      "name": "Bob",
+      "sex": "male",
+      "age": 33,
+      "loggedIn": false,
+      "technical": false,
+      "password": "$6$IihZTJls$9rvdXrJ4Pn.xYMzHdheLHfpeJLbkB.q/.MnkjSuh.EQOBZc2iusnKE77xQVhfk7hQkJSCIiac7BL9uA9a5MzI."
+    },
+    {
+      "id": 101,
+      "channelId": 0,
+      "name": "Candy",
+      "sex": "female",
+      "age": 26,
+      "loggedIn": false,
+      "technical": false,
+      "password": "$6$IihZTJls$9rvdXrJ4Pn.xYMzHdheLHfpeJLbkB.q/.MnkjSuh.EQOBZc2iusnKE77xQVhfk7hQkJSCIiac7BL9uA9a5MzI."
+    },
+    {
+      "id": 102,
+      "channelId": 0,
+      "name": "Rabbit",
+      "sex": "male",
+      "age": 27,
+      "loggedIn": true,
+      "technical": false,
+      "password": "$6$IihZTJls$9rvdXrJ4Pn.xYMzHdheLHfpeJLbkB.q/.MnkjSuh.EQOBZc2iusnKE77xQVhfk7hQkJSCIiac7BL9uA9a5MzI."
+    },
+    {
+      "id": 103,
+      "channelId": 0,
+      "name": "Rob",
+      "sex": "male",
+      "age": 24,
+      "loggedIn": true,
+      "technical": false,
+      "password": "$6$IihZTJls$9rvdXrJ4Pn.xYMzHdheLHfpeJLbkB.q/.MnkjSuh.EQOBZc2iusnKE77xQVhfk7hQkJSCIiac7BL9uA9a5MzI."
+    },
+    {
+      "id": 104,
+      "channelId": 0,
+      "name": "Peter",
+      "sex": "male",
+      "age": 41,
+      "loggedIn": true,
+      "technical": false,
+      "password": "$6$IihZTJls$9rvdXrJ4Pn.xYMzHdheLHfpeJLbkB.q/.MnkjSuh.EQOBZc2iusnKE77xQVhfk7hQkJSCIiac7BL9uA9a5MzI."
+    },
+    {
+      "id": 105,
+      "channelId": 0,
+      "name": "George",
+      "sex": "male",
+      "age": 52,
+      "loggedIn": true,
+      "technical": false,
+      "password": "$6$IihZTJls$9rvdXrJ4Pn.xYMzHdheLHfpeJLbkB.q/.MnkjSuh.EQOBZc2iusnKE77xQVhfk7hQkJSCIiac7BL9uA9a5MzI."
+    },
+    {
+      "id": 106,
+      "channelId": 103,
+      "name": "Sandra",
+      "sex": "female",
+      "age": 30,
+      "loggedIn": true,
+      "technical": false,
+      "password": "$6$IihZTJls$9rvdXrJ4Pn.xYMzHdheLHfpeJLbkB.q/.MnkjSuh.EQOBZc2iusnKE77xQVhfk7hQkJSCIiac7BL9uA9a5MzI."
+    },
+    {
+      "id": 107,
+      "channelId": 102,
+      "name": "Jess",
+      "sex": "female",
+      "age": 29,
+      "loggedIn": false,
+      "technical": false,
+      "password": "$6$IihZTJls$9rvdXrJ4Pn.xYMzHdheLHfpeJLbkB.q/.MnkjSuh.EQOBZc2iusnKE77xQVhfk7hQkJSCIiac7BL9uA9a5MzI."
+    },
+    {
+      "id": 108,
+      "channelId": 102,
+      "name": "Gordon",
+      "sex": "male",
+      "age": 35,
+      "loggedIn": true,
+      "technical": false,
+      "password": "$6$IihZTJls$9rvdXrJ4Pn.xYMzHdheLHfpeJLbkB.q/.MnkjSuh.EQOBZc2iusnKE77xQVhfk7hQkJSCIiac7BL9uA9a5MzI."
+    },
+    {
+      "id": 109,
+      "channelId": 103,
+      "name": "Daniel",
+      "sex": "male",
+      "age": 27,
+      "loggedIn": true,
+      "technical": false,
+      "password": "$6$IihZTJls$9rvdXrJ4Pn.xYMzHdheLHfpeJLbkB.q/.MnkjSuh.EQOBZc2iusnKE77xQVhfk7hQkJSCIiac7BL9uA9a5MzI."
+    },
+    {
+      "id": 110,
+      "channelId": 103,
+      "name": "Annie",
+      "sex": "female",
+      "age": 25,
+      "loggedIn": true,
+      "technical": false,
+      "password": "$6$IihZTJls$9rvdXrJ4Pn.xYMzHdheLHfpeJLbkB.q/.MnkjSuh.EQOBZc2iusnKE77xQVhfk7hQkJSCIiac7BL9uA9a5MzI."
+    },
+    {
+      "id": 111,
+      "channelId": 0,
+      "name": "Barbara",
+      "sex": "female",
+      "age": 41,
+      "loggedIn": true,
+      "technical": false,
+      "password": "$6$IihZTJls$9rvdXrJ4Pn.xYMzHdheLHfpeJLbkB.q/.MnkjSuh.EQOBZc2iusnKE77xQVhfk7hQkJSCIiac7BL9uA9a5MzI."
+    },
+    {
+      "id": 112,
+      "channelId": 103,
+      "name": "Paul",
+      "sex": "male",
+      "age": 39,
+      "loggedIn": false,
+      "technical": false,
+      "password": "$6$IihZTJls$9rvdXrJ4Pn.xYMzHdheLHfpeJLbkB.q/.MnkjSuh.EQOBZc2iusnKE77xQVhfk7hQkJSCIiac7BL9uA9a5MzI."
+    }
+  ]
+}
