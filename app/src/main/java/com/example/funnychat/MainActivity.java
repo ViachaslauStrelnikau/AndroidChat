@@ -12,9 +12,11 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,6 +27,7 @@ import com.example.funnychat.models.Channel;
 import com.example.funnychat.models.Message;
 import com.example.funnychat.models.User;
 import com.example.funnychat.util.AssetsHandler;
+import com.example.funnychat.widgets.AnimatedToggleButton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -52,8 +55,49 @@ public class MainActivity extends AppCompatActivity {
     AssetsHandler assetsHandler = null;
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        System.out.println(this.getClass().getSimpleName() + ":onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        System.out.println(this.getClass().getSimpleName() + ":onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        System.out.println(this.getClass().getSimpleName() + ":onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("selfUserId", selfUserId);
+        outState.putInt("selectedChannelID", selectedChannelID);
+        outState.putInt("selectedUserId", selectedUserId);
+    }
+
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // восстановление параметров--------
+        if (savedInstanceState != null) {
+            selfUserId = (int) savedInstanceState.get("selfUserId");
+            selectedChannelID = (int) savedInstanceState.get("selectedChannelID");
+            selectedUserId = (int) savedInstanceState.get("selectedUserId");
+        }
+        //-------------------------------------
+
         loadMainScreen();
     }
 
@@ -86,9 +130,9 @@ public class MainActivity extends AppCompatActivity {
 
         final AutoCompleteTextView goToView = findViewById(R.id.goto_field);
         final LinearLayout leftBlock = findViewById(R.id.left_block);
-        final ToggleButton buttonMenu = findViewById(R.id.button_menu);
+        final AnimatedToggleButton buttonMenu = findViewById(R.id.button_menu);
         final ImageButton sendButton = findViewById(R.id.send_button);
-        final TextView selfName= findViewById(R.id.self_name);
+        final TextView selfName = findViewById(R.id.self_name);
 
         ListView channelList = findViewById(R.id.channel_list);
         ListView usersList = findViewById(R.id.user_list);
@@ -105,9 +149,8 @@ public class MainActivity extends AppCompatActivity {
         this.loadMessageList();
 
         // устанавливаем имя пользователя под которым вошли
-        for (User user :usersAll) {
-            if(user.getId()==selfUserId)
-            {
+        for (User user : usersAll) {
+            if (user.getId() == selfUserId) {
                 selfName.setText(user.getName());
                 break;
             }
@@ -146,7 +189,24 @@ public class MainActivity extends AppCompatActivity {
             sendMessage();
         });
 
+        selfName.setOnClickListener(v -> {
+            PopupMenu userMenu = new PopupMenu(this.getApplicationContext(), selfName);
+            userMenu.getMenuInflater().inflate(R.menu.user_menu, userMenu.getMenu());
+            userMenu.show();
 
+            userMenu.setOnMenuItemClickListener(item -> {
+                switch (item.getItemId()) {
+                    case R.id.exit: {
+                        selfUserId = 0;
+                        finish();
+                        startActivity(getIntent());
+                    }
+                    break;
+                }
+
+                return false;
+            });
+        });
 
     }
 
@@ -192,9 +252,9 @@ public class MainActivity extends AppCompatActivity {
                             userObject.getInt("age"));
                     user.setSelected(user.getId() == selectedUserId);
                     user.setLoggedIn(userObject.getBoolean("loggedIn"));
-                    if(user.getId()==selfUserId) {
+                    if (user.getId() == selfUserId) {
                         user.setLoggedIn(true);
-                         user.setChannelId(selectedChannelID);
+                        user.setChannelId(selectedChannelID);
                     }
 
                     usersAll.add(user);

@@ -1,7 +1,9 @@
 package com.example.funnychat;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -51,6 +53,11 @@ public class LoginActivity extends AppCompatActivity {
                             Intent intent = new Intent();
                             intent.putExtra("selfUserId", userFound.getInt("id"));
                             setResult(RESULT_OK,intent);
+
+                            //прячем клавиатуру
+                            InputMethodManager imm = (InputMethodManager) this.getApplicationContext().getSystemService(Activity.INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+
                             finish();
                         } else {
                             Toast toast = Toast.makeText(this.getApplicationContext(), R.string.password_mismatch, Toast.LENGTH_SHORT);
